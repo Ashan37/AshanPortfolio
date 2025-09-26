@@ -1,18 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import { assets, infoList } from "../assets/assets";
+import { assets, infoList,toolsData } from "../assets/assets";
 
 const About = () => {
   return (
     <div id="about" className="w-full px-4 py-10 mt-20 scroll">
-      {/* Section titles */}
       <h4 className="mb-2 text-lg text-center font-Ovo">Introduction</h4>
       <h2 className="text-5xl text-center font-Ovo">About me</h2>
 
-      {/* Main flex container */}
       <div className="flex flex-col items-center max-w-6xl gap-20 mx-auto my-20 lg:flex-row lg:items-center">
-        
-        {/* Left: profile image */}
         <div className="flex-shrink-0 w-64 sm:w-80 rounded-3xl">
           <Image
             src={assets.user_image}
@@ -21,7 +17,6 @@ const About = () => {
           />
         </div>
 
-        {/* Right: description + info cards */}
         <div className="flex-1 text-center lg:text-left">
           <p className="max-w-2xl mx-auto mb-10 font-Ovo lg:mx-0">
             I’m a Fullstack Developer with experience building scalable and
@@ -32,7 +27,6 @@ const About = () => {
             products.
           </p>
 
-          {/* Info cards */}
           <ul className="grid max-w-2xl grid-cols-1 gap-6 mx-auto sm:grid-cols-3 lg:mx-0">
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li
@@ -43,6 +37,15 @@ const About = () => {
                 <h3 className="my-4 font-semibold text-gray-700">{title}</h3>
                 <p className="text-sm text-gray-600">{description}</p>
               </li>
+            ))}
+          </ul>
+          
+          <h4 className="my-6 text-gray-700 font-Ovo">Tools I use</h4>
+          <ul className="flex items-center gap-3 sm:gap-5">
+            {toolsData.map((tool, index)=>(
+                <li className="flex items-center justify-center w-12 duration-500 border border-gray-400 rounded-lg cursor-pointer sm:w-14 aspect-square hover:-translate-y-1" key={index}>
+                    <Image src={tool} alt='tool' className="w-5 sm:w-7"/>
+                </li>
             ))}
           </ul>
         </div>
