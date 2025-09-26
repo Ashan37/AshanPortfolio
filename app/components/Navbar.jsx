@@ -22,9 +22,7 @@ const Navbar = () => {
           <Image
             src={assets.logo}
             alt="Ashan"
-            width={300}
-            height={300}
-            className="cursor-pointer w-28 mr-14"
+            className="w-48 cursor-pointer mr-14"
           />
         </a>
 
