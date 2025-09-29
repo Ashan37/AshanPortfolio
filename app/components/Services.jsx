@@ -12,7 +12,7 @@ const Services = () => {
         I build responsive front-end interfaces and scalable back-end systems to deliver complete, user-friendly web solutions.
       </p>
 
-      <div className="grid grid-cols-1 gap-6 my-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 my-10 grid-cols-auto sm:grid-cols-2 lg:grid-cols-4">
         {serviceData.map(({ icon, title, description, link }, i) => (
           <div key={i} className="p-6 transition border border-gray-300 rounded-lg cursor-pointer sm:p-8 hover:bg-lightHover hover:-translate-y-1 hover:shadow-lg">
             <Image src={icon} alt={title} className="w-10 mb-4" />

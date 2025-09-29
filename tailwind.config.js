@@ -17,8 +17,11 @@ module.exports = {
             Ovo: ['Ovo', 'serif']
         },
         boxShadow:{
-            black: '4px 4px 0 #000',
+            'black': '4px 4px 0 #000',
             'white': '4px 4px 0 #fff',
+        },
+        gridTemplateColumns:{
+          'auto': "repeat(auto-fit, minimax(200px, 1fr))"
         }
     },
   },
