@@ -7,82 +7,108 @@ const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
-  const closeMenu = () => setMenuOpen(false);
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+    // Lock body scroll when menu is open
+    if (!menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    document.body.style.overflow = "auto";
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (scrollY > 50) {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
         setIsScroll(true);
       } else {
         setIsScroll(false);
       }
-    });
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = "auto"; // reset on unmount
+    };
   }, []);
 
   return (
     <>
-     
-      <div className="fixed top-0 right-0 z-10 w-11/12 -translate-y-4/5">
+      {/* Background Image */}
+      <div className="fixed top-0 right-0 z-10 w-11/12 pointer-events-none -translate-y-4/5">
         <Image
           src={assets.header_bg_color}
           className="w-full"
-          alt="bg"
+          alt="background"
           priority
         />
       </div>
 
+      {/* Navbar */}
       <nav
-        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
-          isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-all duration-300 ${
+          isScroll
+            ? "bg-white/70 backdrop-blur-lg shadow-sm"
+            : "bg-transparent"
         }`}
       >
-       
-        <a href="#top">
+        {/* Logo */}
+        <a href="#top" aria-label="Go to top">
           <Image
             src={assets.logo}
-            alt="Ashan"
-            className="w-48 cursor-pointer mr-14"
+            alt="Ashan Logo"
+            className="w-40 cursor-pointer sm:w-48"
           />
         </a>
 
-       
-        <ul className={`items-center hidden gap-6 px-12 py-3 ${isScroll ? "": " bg-white bg-opacity-50 shadow-sm"} rounded-full md:flex lg:gap-8`}>
+        {/* Desktop Menu */}
+        <ul
+          className={`items-center hidden gap-6 px-8 py-3 rounded-full md:flex lg:gap-10 ${
+            isScroll ? "bg-transparent" : "bg-white/60 shadow-sm"
+          }`}
+        >
           <li>
-            <a className="font-Ovo" href="#top">
+            <a className="font-Ovo hover:text-gray-700" href="#top">
               Home
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#about">
+            <a className="font-Ovo hover:text-gray-700" href="#about">
               About me
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#services">
+            <a className="font-Ovo hover:text-gray-700" href="#services">
               Services
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#work">
+            <a className="font-Ovo hover:text-gray-700" href="#work">
               My work
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#contact">
+            <a className="font-Ovo hover:text-gray-700" href="#contact">
               Contact me
             </a>
           </li>
         </ul>
 
-        {/* right side controls */}
+        {/* Right controls */}
         <div className="flex items-center gap-4">
           <button type="button" aria-label="Toggle theme">
             <Image src={assets.moon_icon} alt="theme" width={20} height={20} />
           </button>
+
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo"
+            className="hidden lg:flex items-center gap-2 px-8 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo hover:bg-gray-100 transition"
           >
             Contact
             <Image
@@ -90,11 +116,10 @@ const Navbar = () => {
               alt="arrow"
               width={12}
               height={12}
-              className="ml-2"
             />
           </a>
 
-          {/* hamburger for mobile */}
+          {/* Hamburger for mobile */}
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -105,9 +130,9 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* ----------mobile view - menu slides in/out---------- */}
+        {/* Mobile Menu */}
         <ul
-          className={`fixed top-0 bottom-0 right-0 z-50 flex flex-col w-64 h-screen gap-4 px-10 py-20 bg-rose-50 transform transition-transform duration-500 md:hidden ${
+          className={`fixed top-0 bottom-0 right-0 z-40 flex flex-col w-64 h-screen gap-6 px-10 py-20 bg-white shadow-lg transform transition-transform duration-500 md:hidden ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

@@ -4,7 +4,7 @@ import { assets } from "../assets/assets";
 
 const Header = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center w-11/12 h-screen max-w-4xl gap-6 px-4 mx-auto text-center lg:pt-64">
+    <div className="relative flex flex-col items-center justify-center w-11/12 h-screen max-w-4xl gap-6 px-4 mx-auto text-center lg:pt-48">
       {/* Profile Image */}
       <div className="relative z-20">
         <Image
@@ -15,7 +15,7 @@ const Header = () => {
         />
       </div>
 
-      {/* Intro Text */}
+      {/* Intro */}
       <h3 className="relative z-20 flex items-center justify-center gap-2 mb-2 text-xl md:text-2xl font-Ovo">
         Hi! I'm Ashan Ekanayake
         <Image src={assets.hand_icon} alt="hand" className="w-6 md:w-7" />
@@ -38,23 +38,15 @@ const Header = () => {
           className="flex items-center gap-2 px-10 py-3 text-white bg-black border border-white rounded-full"
         >
           Contact Me
-          <Image
-            src={assets.right_arrow_white}
-            alt="arrow"
-            className="w-4"
-          />
+          <Image src={assets.right_arrow_white} alt="arrow" className="w-4" />
         </a>
         <a
           href="/sample-resume.pdf"
           download
           className="flex items-center gap-2 px-10 py-3 border border-gray-500 rounded-full"
         >
-          My Resume{" "}
-          <Image
-            src={assets.download_icon}
-            alt="download"
-            className="w-4"
-          />
+          My Resume
+          <Image src={assets.download_icon} alt="download" className="w-4" />
         </a>
       </div>
     </div>
@@ -62,3 +54,4 @@ const Header = () => {
 };
 
 export default Header;
+
