@@ -5,7 +5,6 @@ import { assets } from "../assets/assets";
 const Header = () => {
   return (
     <div className="relative flex flex-col items-center justify-center w-11/12 h-screen max-w-4xl gap-6 px-4 mx-auto text-center lg:pt-48">
-      {/* Profile Image */}
       <div className="relative z-20">
         <Image
           src={assets.profile_img}
@@ -15,23 +14,19 @@ const Header = () => {
         />
       </div>
 
-      {/* Intro */}
       <h3 className="relative z-20 flex items-center justify-center gap-2 mb-2 text-xl md:text-2xl font-Ovo">
         Hi! I'm Ashan Ekanayake
         <Image src={assets.hand_icon} alt="hand" className="w-6 md:w-7" />
       </h3>
 
-      {/* Main Heading */}
-      <h1 className="text-3xl sm:text-5xl lg:text-[56px] leading-tight font-Ovo relative z-20">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight font-Ovo z-20">
         Frontend and Backend Developer based in Colombo.
       </h1>
 
-      {/* Description */}
-      <p className="relative z-20 max-w-2xl mx-auto text-gray-700 font-Ovo">
+      <p className="z-20 max-w-2xl mx-auto text-gray-700 font-Ovo">
         I am a frontend and backend developer from Colombo, Sri Lanka.
       </p>
 
-      {/* Buttons */}
       <div className="relative z-20 flex flex-col items-center gap-4 mt-6 sm:flex-row">
         <a
           href="#contact"
@@ -54,4 +49,3 @@ const Header = () => {
 };
 
 export default Header;
-
