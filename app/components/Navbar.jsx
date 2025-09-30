@@ -31,12 +31,12 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Background */}
-      <div className="fixed top-0 right-0 z-10 w-full pointer-events-none -translate-y-4/5">
+      {/* Background Cover (subtle height) */}
+      <div className="fixed top-0 left-0 z-0 w-full h-24 pointer-events-none sm:h-28 md:h-32">
         <Image
           src={assets.header_bg_color}
-          className="w-full"
           alt="background"
+          className="object-cover w-full h-full"
           priority
         />
       </div>
@@ -108,3 +108,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
