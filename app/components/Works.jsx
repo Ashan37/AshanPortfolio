@@ -45,6 +45,11 @@ const Works = () => {
           </div>
         ))}
       </div>
+      
+      <a href="" className="flex items-center justify-center gap-2 text-gray-700 border border-[0.5px] border-gray-700 rounded-full y-3 px-10 mx-auto my-20 hover: w-max">
+        Show more <Image src={assets.right_arrow_bold} alt="Rightarrowbold" className="w-4"/>
+      </a>
+      
     </div>
   );
 };
