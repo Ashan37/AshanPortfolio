@@ -35,34 +35,26 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 z-0 w-full h-24 pointer-events-none sm:h-28 md:h-32">
+      <div className="fixed top-0 left-0 z-0 w-full h-24 pointer-events-none sm:h-28 md:h-32 dark:hidden">
         <Image
           src={assets.header_bg_color}
           alt="background"
-          fill
-          className="object-cover"
-          priority
+          className="w-full"
         />
       </div>
 
       <nav
-        className={`w-full fixed top-0 left-0 px-4 sm:px-6 md:px-8 lg:px-[8%] py-4 flex items-center justify-between z-50 transition-all duration-300 ${
-          isScroll
-            ? "bg-white/70 backdrop-blur-lg shadow-sm dark:bg-darkTheme/60"
-            : "bg-transparent"
-        }`}
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20" : ""}`}
       >
         <a href="#top" aria-label="Go to top">
           <Image
-            src={assets.logo}
+            src={isDarkMode? assets.logo_dark:assets.logo}
             alt="Logo"
-            width={150}
-            height={40}
-            priority
+           className="w-28 alt='' cursor-pointer mr-14"
           />
         </a>
 
-        <ul className="items-center hidden gap-4 text-gray-800 md:flex sm:gap-6 lg:gap-10 font-ovo">
+        <ul className={`items-center hidden gap-6 text-gray-800 md:flex sm:gap-6 lg:gap-8 rounded-full px-12 py-3 dark:text-white ${isScroll ? "" :"bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"} `}>
           <li>
             <a
               href="#top"
