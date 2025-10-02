@@ -39,8 +39,13 @@ import front_end_programming from './front-end-programming.png';
 import web_development from './web-development.png';
 import ux from './ux.png';
 import database from './database.png';
+import work_1 from './public/work-1.png';
+import work_2 from './public/work-2.png';
+import work_3 from './public/work-3.png';
+import work_4 from './public/work-4.png';
 
 export const assets = {
+
     front_end_programming,
     web_development,
     ux,
@@ -81,29 +86,33 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    work_1,
+    work_2,
+    work_3,
+    work_4,
 };
 
 export const workData = [
     {
         title: 'Frontend project',
         description: 'Web Design',
-        bgImage: '/work-1.png',
+        bgImage: assets.work_1,
     },
     {
         title: 'Geo based app',
         description: 'Mobile App',
-        bgImage: '/work-2.png',
+        bgImage: assets.work_2,
     },
     {
         title: 'Photography site',
         description: 'Web Design',
-        bgImage: '/work-3.png',
+        bgImage: assets.work_3,
     },
     {
         title: 'UI/UX designing',
         description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        bgImage: assets.work_4,
     },
 ]
 
