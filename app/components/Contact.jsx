@@ -2,7 +2,7 @@
 import React, {useState} from "react";
 
 
-const Contact = () => {
+const Contact = ({ isDarkMode }) => {
 
   const [result, setResult] =useState("");
 
@@ -44,13 +44,13 @@ const Contact = () => {
 
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
         <div className="grid gap-6 mt-10 mb-8 grid-cols-auto">
-            <input name="name" className="flex flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white" type="text" placeholder="Enter your name" required />
-            <input name="email" className="flex flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white" type="email" placeholder="Enter your email" required/>
+            <input name="name" className="flex flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-gray-800 dark:border-gray-600 dark:text-white" type="text" placeholder="Enter your name" required />
+            <input name="email" className="flex flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-gray-800 dark:border-gray-600 dark:text-white" type="email" placeholder="Enter your email" required/>
         </div>
-        <textarea name='message' className="w-full p-4 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white mb-6" rows={6} placeholder="Enter your message" required></textarea>
+        <textarea name='message' className="w-full p-4 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-gray-800 dark:border-gray-600 dark:text-white" rows={6} placeholder="Enter your message" required></textarea>
         <button className="flex items-center gap-2 px-8 py-3 mx-auto text-white duration-500 rounded-full bg-black/80 justyfy-between hover:bg-black" type="submit">Submit now</button>
 
-        <p className="mt-4">{result}</p>
+        <p className="mt-4 dark:text-white">{result}</p>
         
       </form>
     </div>

@@ -23,7 +23,7 @@ const Header = () => {
         Frontend and Backend Developer based in Colombo.
       </h1>
 
-      <p className="z-20 max-w-2xl mx-auto text-gray-700 font-Ovo">
+      <p className="z-20 max-w-2xl mx-auto text-gray-700 font-Ovo dark:text-white">
         I am a frontend and backend developer from Colombo, Sri Lanka.
       </p>
 

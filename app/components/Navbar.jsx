@@ -127,11 +127,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           >
             Contact
             <Image
-              src={assets.arrow_icon}
+              src={ assets.arrow_icon}
               alt="arrow"
-              width={12}
-              height={12}
-              className={isDarkMode ? "invert" : ""}
+              width={16}
+              className={ isDarkMode ? "invert" : ""}
             />
           </a>
 

@@ -2,7 +2,7 @@ import React from "react";
 import { assets, workData } from "../assets/assets";
 import Image from "next/image";
 
-const Works = () => {
+const Works = ({ isDarkMode }) => {
   return (
     <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
       <h4 className="mb-2 text-lg text-center font-Ovo">My portfolio</h4>
@@ -10,7 +10,7 @@ const Works = () => {
         My latest work
       </h2>
 
-      <p className="max-w-2xl mx-auto mt-5 mb-12 text-center font-Ovo">
+      <p className="max-w-2xl mx-auto mt-5 mb-12 text-center font-Ovo dark:text-white">
         I build responsive front-end interfaces and scalable back-end systems to
         deliver complete, user-friendly web solutions.
       </p>
@@ -49,11 +49,11 @@ const Works = () => {
 
       <a
         href=""
-        className="flex items-center justify-center gap-2 text-gray-700 border border-[0.5px] border-gray-700 rounded-full y-3 px-10 mx-auto my-20 hover: w-max"
+        className="flex items-center justify-center gap-2 text-gray-700 border border-[0.5px] border-gray-700 rounded-full y-3 px-10 mx-auto my-20 hover: w-max dark:text-white dark:border-white"
       >
         Show more{" "}
         <Image
-          src={assets.right_arrow_bold}
+          src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold}
           alt="Rightarrowbold"
           className="w-4"
         />

@@ -2,7 +2,7 @@ import React from "react";
 import { assets, serviceData } from "../assets/assets";
 import Image from "next/image";
 
-const Services = () => {
+const Services = ({ isDarkMode }) => {
   return (
     <div
       id="services"
@@ -20,17 +20,25 @@ const Services = () => {
         {serviceData.map(({ icon, title, description, link }, i) => (
           <div
             key={i}
-            className="p-6 transition border border-gray-300 rounded-lg cursor-pointer sm:p-8 hover:bg-lightHover hover:-translate-y-1 hover:shadow-lg"
+            className="p-6 transition border border-gray-300 rounded-lg cursor-pointer sm:p-8 hover:bg-lightHover hover:-translate-y-1 hover:shadow-lg dark:border-gray-600 dark:hover:bg-gray-800"
           >
-            <Image src={icon} alt={title} className="w-10 mb-4" />
-            <h3 className="mb-2 text-lg text-gray-700">{title}</h3>
-            <p className="text-sm text-gray-600">{description}</p>
+            <Image 
+              src={icon} 
+              alt={title} 
+              className={`w-10 mb-4 ${isDarkMode ? 'invert' : ''}`} 
+            />
+            <h3 className="mb-2 text-lg text-gray-700 dark:text-white">{title}</h3>
+            <p className="text-sm text-gray-600 dark:text-white">{description}</p>
             <a
               href={link}
-              className="flex items-center gap-2 mt-4 text-sm text-black hover:underline"
+              className="flex items-center gap-2 mt-4 text-sm text-black hover:underline dark:text-white"
             >
               Read more{" "}
-              <Image src={assets.right_arrow} alt="arrow" className="w-4" />
+              <Image 
+                src={assets.right_arrow} 
+                alt="arrow" 
+                className={`w-4 ${isDarkMode ? 'invert' : ''}`} 
+              />
             </a>
           </div>
         ))}
