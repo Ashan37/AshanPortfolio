@@ -4,13 +4,13 @@ import { assets } from "../assets/assets";
 
 const Footer = ({ isDarkMode }) => {
   return (
-    <footer className="mt-20 bg-gray-50 dark:bg-gray-900">
+    <footer className="relative mt-20 py-10 bg-gray-50 dark:bg-darkHover/50">
     
       <div className="text-center">
-        <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt="Ashan Ekanayake Logo" className="w-40 mx-auto mb-4" />
+  <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt="Ashan Ekanayake Logo" width={160} height={40} className="mx-auto mb-4" />
 
         <div className="flex items-center justify-center gap-2 text-gray-700 dark:text-white">
-          <Image src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon} alt="Email Icon" className="w-5 h-5" />
+          <Image src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon} alt="Email Icon" width={20} height={20} />
           <a href="mailto:ashanekanayakeat@gmail.com" className="hover:underline">
             ashanekanayakeat@gmail.com
           </a>
@@ -18,7 +18,7 @@ const Footer = ({ isDarkMode }) => {
       </div>
 
       
-      <div className="border-t border-gray-300 mx-[10%] mt-10 py-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-600 dark:border-gray-600 dark:text-gray-300">
+      <div className="border-t border-gray-300 mx-[10%] mt-10 py-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-600 dark:border-white/20 dark:text-white/80">
         <p>© {new Date().getFullYear()} Ashan Ekanayake. All rights reserved.</p>
 
         <ul className="flex items-center gap-8 mt-4 sm:mt-0">

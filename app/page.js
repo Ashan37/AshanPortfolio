@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(false); // safe SSR default
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -18,12 +18,12 @@ export default function Home() {
 
     try {
       const theme = localStorage.getItem("theme");
-      const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const dark = theme === "dark" || (!theme && prefers);
+      // Default to light mode when there's no saved preference.
+      // Previously the code followed the user's OS preference when no theme was saved.
+      const dark = theme === "dark";
       setIsDarkMode(dark);
       document.documentElement.classList.toggle("dark", dark);
     } catch {
-      // fallback to light
       document.documentElement.classList.remove("dark");
     }
   }, []);

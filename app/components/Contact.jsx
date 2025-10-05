@@ -31,24 +31,24 @@ const Contact = ({ isDarkMode }) => {
 
   
   return (
-    <div id="contact" className="w-full px-[12%] py-10 scroll-mt-20">
-      <h4 className="mb-2 text-lg text-center font-Ovo">Connect with me</h4>
-      <h2 className="text-4xl text-center sm:text-5xl font-Ovo">
+    <div id="contact" className="relative w-full px-[12%] py-10 lg:py-16 scroll-mt-20">
+      <h4 className="mb-2 text-lg text-center font-Ovo dark:text-white">Connect with me</h4>
+      <h2 className="text-4xl text-center sm:text-5xl font-Ovo dark:text-white">
         Get in touch
       </h2>
 
-      <p className="max-w-2xl mx-auto mt-5 mb-12 text-center font-Ovo">
+      <p className="max-w-2xl mx-auto mt-5 mb-12 text-center font-Ovo dark:text-white/90">
         I’d love to hear from you! Whether it’s a project idea, a question, or
         just a hello feel free to reach out and let’s connect.
       </p>
 
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
         <div className="grid gap-6 mt-10 mb-8 grid-cols-auto">
-            <input name="name" className="flex flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-gray-800 dark:border-gray-600 dark:text-white" type="text" placeholder="Enter your name" required />
-            <input name="email" className="flex flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-gray-800 dark:border-gray-600 dark:text-white" type="email" placeholder="Enter your email" required/>
+            <input name="name" className="flex flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover dark:border-white/20 dark:text-white dark:placeholder:text-white/60" type="text" placeholder="Enter your name" required />
+            <input name="email" className="flex flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover dark:border-white/20 dark:text-white dark:placeholder:text-white/60" type="email" placeholder="Enter your email" required/>
         </div>
-        <textarea name='message' className="w-full p-4 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-gray-800 dark:border-gray-600 dark:text-white" rows={6} placeholder="Enter your message" required></textarea>
-        <button className="flex items-center gap-2 px-8 py-3 mx-auto text-white duration-500 rounded-full bg-black/80 justyfy-between hover:bg-black" type="submit">Submit now</button>
+        <textarea name='message' className="w-full p-4 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover dark:border-white/20 dark:text-white dark:placeholder:text-white/60" rows={6} placeholder="Enter your message" required></textarea>
+        <button className="flex items-center gap-2 px-8 py-3 mx-auto text-white duration-500 rounded-full bg-black/80 justify-between hover:bg-black dark:bg-white dark:text-black dark:hover:bg-white/90 hover:shadow-lg" type="submit">Submit now</button>
 
         <p className="mt-4 dark:text-white">{result}</p>
         

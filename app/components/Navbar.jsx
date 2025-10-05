@@ -48,9 +48,11 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       >
         <a href="#top" aria-label="Go to top">
           <Image
-            src={isDarkMode? assets.logo_dark:assets.logo}
+            src={isDarkMode ? assets.logo_dark : assets.logo}
             alt="Logo"
-           className="w-28 alt='' cursor-pointer mr-14"
+            width={112}
+            height={32}
+            className="cursor-pointer mr-14"
           />
         </a>
 
@@ -130,6 +132,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               src={ assets.arrow_icon}
               alt="arrow"
               width={16}
+              height={16}
               className={ isDarkMode ? "invert" : ""}
             />
           </a>

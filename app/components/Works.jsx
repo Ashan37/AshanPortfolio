@@ -4,13 +4,18 @@ import Image from "next/image";
 
 const Works = ({ isDarkMode }) => {
   return (
-    <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
-      <h4 className="mb-2 text-lg text-center font-Ovo">My portfolio</h4>
-      <h2 className="text-4xl text-center sm:text-5xl font-Ovo">
-        My latest work
+    <div
+      id="work"
+      className="relative w-full px-[12%] py-10 lg:py-16 scroll-mt-20"
+    >
+      <h4 className="mb-2 text-lg text-center font-Ovo dark:text-white">
+        My portfolio
+      </h4>
+      <h2 className="text-4xl text-center sm:text-5xl font-Ovo dark:text-white">
+        My latest works
       </h2>
 
-      <p className="max-w-2xl mx-auto mt-5 mb-12 text-center font-Ovo dark:text-white">
+      <p className="max-w-2xl mx-auto mt-5 mb-12 text-center font-Ovo dark:text-white/90">
         I build responsive front-end interfaces and scalable back-end systems to
         deliver complete, user-friendly web solutions.
       </p>
@@ -19,7 +24,7 @@ const Works = ({ isDarkMode }) => {
         {workData.map((project, index) => (
           <div
             key={index}
-            className="relative h-64 overflow-hidden group rounded-xl"
+            className="relative h-64 overflow-hidden transition border group rounded-xl border-transparent hover:border-gray-300 dark:hover:border-white/20 hover:shadow-lg dark:hover:shadow-white/10"
           >
             <Image
               src={project.bgImage}
@@ -49,13 +54,16 @@ const Works = ({ isDarkMode }) => {
 
       <a
         href=""
-        className="flex items-center justify-center gap-2 text-gray-700 border border-[0.5px] border-gray-700 rounded-full y-3 px-10 mx-auto my-20 hover: w-max dark:text-white dark:border-white"
+        className="flex items-center justify-center gap-2 py-3 px-10 mx-auto my-20 w-max text-gray-700 border border-[0.5px] border-gray-700 rounded-full transition hover:bg-black hover:text-white hover:shadow-md dark:text-white dark:border-white dark:hover:bg-white/5 dark:hover:shadow-white/10"
       >
         Show more{" "}
         <Image
-          src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold}
+          src={
+            isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold
+          }
           alt="Rightarrowbold"
-          className="w-4"
+          width={16}
+          height={16}
         />
       </a>
     </div>
