@@ -44,11 +44,11 @@ const Contact = ({ isDarkMode }) => {
 
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
         <div className="grid gap-6 mt-10 mb-8 grid-cols-auto">
-            <input name="name" className="flex flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover dark:border-white/20 dark:text-white dark:placeholder:text-white/60" type="text" placeholder="Enter your name" required />
-            <input name="email" className="flex flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover dark:border-white/20 dark:text-white dark:placeholder:text-white/60" type="email" placeholder="Enter your email" required/>
+            <input name="name" className="flex flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-zinc-800 dark:border-none dark:text-white dark:placeholder:text-gray/60" type="text" placeholder="Enter your name" required />
+            <input name="email" className="flex flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-zinc-800 dark:border-none dark:text-white dark:placeholder:text-gray/60" type="email" placeholder="Enter your email" required/>
         </div>
-        <textarea name='message' className="w-full p-4 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover dark:border-white/20 dark:text-white dark:placeholder:text-white/60" rows={6} placeholder="Enter your message" required></textarea>
-        <button className="flex items-center gap-2 px-8 py-3 mx-auto text-white duration-500 rounded-full bg-black/80 justify-between hover:bg-black dark:bg-white dark:text-black dark:hover:bg-white/90 hover:shadow-lg" type="submit">Submit now</button>
+        <textarea name='message' className="w-full p-4 outline-none border border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-zinc-800 dark:border-none dark:text-white dark:placeholder:text-gray/60" rows={6} placeholder="Enter your message" required></textarea>
+        <button className="flex items-center gap-2 px-8 py-3 mx-auto text-white duration-500 rounded-full bg-black justify-between hover:bg-black dark:bg-black dark:border dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black hover:shadow-lg dark:hover:shadow-white/30 group animate-fadeIn" type="submit">Submit now</button>
 
         <p className="mt-4 dark:text-white">{result}</p>
         
