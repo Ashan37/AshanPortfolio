@@ -43,9 +43,11 @@ import work_1 from './public/work-1.png';
 import work_2 from './public/work-2.png';
 import work_3 from './public/work-3.png';
 import work_4 from './public/work-4.png';
+import download_icon_black from './download-icon-black.png';
 
 export const assets = {
 
+    download_icon_black,
     front_end_programming,
     web_development,
     ux,
@@ -95,23 +97,24 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'HireMeNow',
+        description: 'Individual Project',
         bgImage: assets.work_1,
+        link: 'https://github.com/Ashan37/HireMeNow.git'
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'NovaScript',
+        description: 'Group Project',
         bgImage: assets.work_2,
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'BiverseHotel',
+        description: 'Individual Project',
         bgImage: assets.work_3,
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: 'BizOra',
+        description: 'Individual Project(Ongoing)',
         bgImage: assets.work_4,
     },
 ]

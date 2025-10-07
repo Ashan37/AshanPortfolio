@@ -80,7 +80,7 @@ const Works = ({ isDarkMode }) => {
       </div>
 
       <a
-        href=""
+        href="https://github.com/dashboard"
         className={`flex items-center justify-center gap-2 py-3 px-10 mx-auto my-20 w-max text-[#2d3748] border border-[0.5px] border-gray-700 rounded-full transition-all duration-300 hover:gap-3 hover:bg-[#1a202c] hover:text-white hover:shadow-xl hover:scale-105 dark:text-[#FFFFFF] dark:border-[#01C38D] dark:hover:bg-[#01C38D] dark:hover:text-[#191E29] dark:hover:shadow-[#01C38D]/20 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         style={{transitionDelay: isVisible ? '100ms' : '0ms'}}
       >

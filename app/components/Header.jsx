@@ -38,11 +38,11 @@ const Header = ({ isDarkMode }) => {
         </a>
         <a
           href="/sample-resume.pdf"
-          download
+          download="Ashan_Ekanayake_Resume.pdf"
           className="flex items-center gap-2 px-10 py-3 border border-gray-700 text-gray-800 rounded-full hover:bg-gray-100 dark:border-[#01C38D] dark:text-[#FFFFFF] dark:hover:bg-[#01C38D] dark:hover:text-[#191E29] transition-all duration-200 hover:scale-105 hover:shadow-lg"
         >
           My Resume
-          <Image src={assets.download_icon} alt="download" width={16} height={16} className="transition-transform group-hover:translate-y-1" />
+          <Image src={isDarkMode ? assets.download_icon : assets.download_icon_black} alt="download" width={16} height={16} className="transition-transform group-hover:translate-y-1" />
         </a>
       </div>
     </div>

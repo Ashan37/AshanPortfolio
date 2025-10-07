@@ -40,7 +40,7 @@ const About = ({ isDarkMode }) => {
             alt="Profile"
             width={320}
             height={320}
-            className="w-full rounded-3xl transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:rotate-2"
+            className="w-full rounded-3xl transition-all duration-100 group-hover:scale-105 group-hover:shadow-2xl group-hover:ease-in"
           />
         </div>
 
@@ -56,7 +56,7 @@ const About = ({ isDarkMode }) => {
             {infoList.map(({ icon, iconDark, title, description }, i) => (
               <li
                 key={i}
-                className={`p-6 transition-all duration-300 border border-gray-300 rounded-xl hover:bg-gray-50 hover:-translate-y-2 hover:shadow-xl hover:border-gray-400 dark:border-[#01C38D]/30 dark:hover:bg-[#132D46] dark:hover:shadow-[#01C38D]/20 dark:hover:border-[#01C38D] cursor-pointer ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'}`}
+                className={`p-6 transition-all duration-100 border border-gray-300 rounded-xl hover:bg-gray-50 hover:-translate-y-2 hover:shadow-xl hover:border-gray-400 dark:border-[#01C38D]/30 dark:hover:bg-[#132D46] dark:hover:shadow-[#01C38D]/20 dark:hover:border-[#01C38D] cursor-pointer ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'}`}
                 style={{transitionDelay: isVisible ? `${400 + i * 100}ms` : '0ms'}}
               >
                 <Image src={isDarkMode && iconDark ? iconDark : icon} alt={title} width={28} height={28} className="mt-3" />
@@ -70,7 +70,7 @@ const About = ({ isDarkMode }) => {
             ))}
           </ul>
 
-          <h4 className={`my-6 text-[#2d3748] font-Ovo dark:text-[#01C38D] transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: isVisible ? '700ms' : '0ms'}}>
+          <h4 className={`my-6 text-[#2d3748] font-Ovo dark:text-[#01C38D] transition-all duration-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: isVisible ? '700ms' : '0ms'}}>
             Tools I use
           </h4>
           <ul className="flex flex-wrap justify-center gap-3 lg:justify-start sm:gap-5">
