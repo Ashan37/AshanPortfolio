@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         "light-hover": "#fcf4ff",
         "dark-hover": "#2a004a",
-        darkTheme: "#03010d",
+        darkTheme: "#191E29",
       },
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],

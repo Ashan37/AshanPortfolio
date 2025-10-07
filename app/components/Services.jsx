@@ -1,17 +1,43 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import { assets, serviceData } from "../assets/assets";
 import Image from "next/image";
 
 const Services = ({ isDarkMode }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div
       id="services"
+      ref={sectionRef}
       className="relative w-full px-4 sm:px-6 md:px-12 lg:px-[12%] py-10 lg:py-16 scroll-mt-20"
     >
-      <h4 className="mb-2 text-lg text-center font-Ovo dark:text-white animate-fadeIn">What I offer</h4>
-      <h2 className="text-4xl text-center sm:text-5xl font-Ovo dark:text-white animate-fadeIn" style={{animationDelay: '0.2s'}}>My services</h2>
+      <h4 className={`mb-2 text-lg text-center font-Ovo dark:text-[#FFFFFF] transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>What I offer</h4>
+      <h2 className={`text-4xl text-center sm:text-5xl font-Ovo dark:text-[#01C38D] transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>My services</h2>
 
-      <p className="max-w-2xl mx-auto mt-5 mb-12 text-center font-Ovo dark:text-white/90 leading-relaxed animate-fadeIn" style={{animationDelay: '0.4s'}}>
+      <p className={`max-w-2xl mx-auto mt-5 mb-12 text-center font-Ovo dark:text-[#FFFFFF] leading-relaxed transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         I build responsive front-end interfaces and scalable back-end systems to
         deliver complete, user-friendly web solutions.
       </p>
@@ -20,8 +46,8 @@ const Services = ({ isDarkMode }) => {
         {serviceData.map(({ icon, title, description, link }, i) => (
           <div
             key={i}
-            className="p-6 transition-all duration-500 border border-gray-300 rounded-lg cursor-pointer sm:p-8 hover:bg-lightHover hover:-translate-y-3 hover:shadow-2xl hover:border-gray-400 dark:border-white/20 dark:hover:bg-white/5 dark:hover:shadow-white/20 dark:hover:border-white/40 animate-scaleIn group"
-            style={{animationDelay: `${i * 0.1}s`}}
+            className={`p-6 transition-all duration-700 border border-gray-300 rounded-lg cursor-pointer sm:p-8 hover:bg-lightHover hover:-translate-y-3 hover:shadow-2xl hover:border-gray-400 dark:border-[#01C38D]/30 dark:hover:bg-[#132D46] dark:hover:shadow-[#01C38D]/20 dark:hover:border-[#01C38D] group ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'}`}
+            style={{transitionDelay: isVisible ? `${300 + i * 100}ms` : '0ms'}}
           >
             <Image 
               src={icon} 
@@ -30,11 +56,11 @@ const Services = ({ isDarkMode }) => {
               height={40}
               className={`mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6 ${isDarkMode ? 'invert' : ''}`} 
             />
-            <h3 className="mb-2 text-lg text-gray-700 dark:text-white">{title}</h3>
-            <p className="text-sm text-gray-600 dark:text-white/80">{description}</p>
+            <h3 className="mb-2 text-lg text-gray-700 dark:text-[#01C38D]">{title}</h3>
+            <p className="text-sm text-gray-600 dark:text-[#FFFFFF]">{description}</p>
             <a
               href={link}
-              className="flex items-center gap-2 mt-4 text-sm font-medium text-black transition-all duration-300 hover:gap-3 hover:underline dark:text-white dark:hover:text-white/80"
+              className="flex items-center gap-2 mt-4 text-sm font-medium text-black transition-all duration-300 hover:gap-3 hover:underline dark:text-[#FFFFFF] dark:hover:text-[#01C38D]"
             >
               Read more{" "}
               <Image 
