@@ -22,7 +22,7 @@ const Footer = ({ isDarkMode }) => {
             width={20} 
             height={20} 
           />
-          <a href="mailto:ashanekanayakeat@gmail.com" className="hover:underline transition-all font-Ovo">
+          <a href="mailto:ashanekanayakeat@gmail.com" className="hover:underline transition-all font-Ovo text-[#2d3748] dark:text-[#FFFFFF]">
             ashanekanayakeat@gmail.com
           </a>
         </div>
@@ -38,7 +38,7 @@ const Footer = ({ isDarkMode }) => {
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/Ashan37"
-              className="transition-all hover:text-black dark:hover:text-[#01C38D] hover:underline hover:scale-105 inline-block"
+              className="transition-all hover:text-[#1a202c] dark:hover:text-[#01C38D] hover:underline hover:scale-105 inline-block"
             >
               GitHub
             </a>
@@ -48,7 +48,7 @@ const Footer = ({ isDarkMode }) => {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/ashan-ekanayake-a02840302/"
-              className="transition-all hover:text-black dark:hover:text-[#01C38D] hover:underline hover:scale-105 inline-block"
+              className="transition-all hover:text-[#1a202c] dark:hover:text-[#01C38D] hover:underline hover:scale-105 inline-block"
             >
               LinkedIn
             </a>
@@ -58,7 +58,7 @@ const Footer = ({ isDarkMode }) => {
               target="_blank"
               rel="noopener noreferrer"
               href="https://facebook.com/"
-              className="transition-all hover:text-black dark:hover:text-[#01C38D] hover:underline hover:scale-105 inline-block"
+              className="transition-all hover:text-[#1a202c] dark:hover:text-[#01C38D] hover:underline hover:scale-105 inline-block"
             >
               Facebook
             </a>
