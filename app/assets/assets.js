@@ -44,9 +44,24 @@ import work_2 from './public/work-2.png';
 import work_3 from './public/work-3.png';
 import work_4 from './public/work-4.png';
 import download_icon_black from './download-icon-black.png';
+import react from './react.svg';
+import nodejs from './nodejs.png';
+import express from './express.png';
+import mysql from './mysql.png';
+import javascript from './javascript.png';
+import html from './html.png';
+import css from './css.png';
+import php from './php.png';
+import nextjs from './nextjs.png';
+
+// Note: Add these logo files to your assets folder for the tech stack
+// You can download free logos from:
+// - https://www.vectorlogo.zone/
+// - https://simpleicons.org/
+// - https://devicon.dev/
+// Required files: nodejs.png, express.png, mysql.png, javascript.png, html.png, css.png, php.png, nextjs.png
 
 export const assets = {
-
     download_icon_black,
     front_end_programming,
     web_development,
@@ -93,6 +108,15 @@ export const assets = {
     work_2,
     work_3,
     work_4,
+    react,
+    nodejs,
+    express,
+    mysql,
+    javascript,
+    html,
+    css,
+    php,
+    nextjs,
 };
 
 export const workData = [
@@ -133,5 +157,14 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.react,       // React.js
+    assets.nodejs,      // Node.js
+    assets.express,     // Express
+    assets.mongodb,     // MongoDB
+    assets.mysql,       // MySQL
+    assets.javascript,  // JavaScript
+    assets.html,        // HTML
+    assets.css,         // CSS
+    assets.php,         // PHP
+    assets.nextjs,      // Next.js
 ];
