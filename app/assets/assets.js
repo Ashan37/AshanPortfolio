@@ -8,7 +8,6 @@ import project_icon_dark from "./project-icon-dark.png";
 import vscode from "./vscode.png";
 import firebase from "./firebase.png";
 import figma from "./figma.png";
-import git from "./git.png";
 import mongodb from "./mongodb.png";
 import right_arrow_white from "./right-arrow-white.png";
 import logo from "./logo.png";
@@ -78,8 +77,6 @@ export const assets = {
   project_icon_dark,
   vscode,
   firebase,
-  figma,
-  git,
   mongodb,
   right_arrow_white,
   logo,

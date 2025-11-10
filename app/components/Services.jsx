@@ -58,19 +58,6 @@ const Services = ({ isDarkMode }) => {
             />
             <h3 className="mb-2 text-lg text-[#2d3748] dark:text-[#01C38D]">{title}</h3>
             <p className="text-sm text-gray-600 dark:text-[#FFFFFF]">{description}</p>
-            <a
-              href={link}
-              className="flex items-center gap-2 mt-4 text-sm font-medium text-[#1a202c] transition-all duration-200 hover:gap-3 hover:underline dark:text-[#FFFFFF] dark:hover:text-[#01C38D]"
-            >
-              Read more{" "}
-              <Image 
-                src={assets.right_arrow} 
-                alt="arrow" 
-                width={16}
-                height={16}
-                className={`transition-transform duration-200 group-hover:translate-x-1 ${isDarkMode ? 'invert' : ''}`} 
-              />
-            </a>
           </div>
         ))}
       </div>
