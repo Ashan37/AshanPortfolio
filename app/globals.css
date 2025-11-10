@@ -6,6 +6,28 @@
   font-family: Outfit, sans-serif;
 }
 
+/* Smooth Theme Transition */
+html {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Apply smooth transitions to all theme-aware elements */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+/* Prevent transitions on page load */
+.preload-transitions * {
+  transition: none !important;
+}
+
+/* Preserve specific animations */
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -17,6 +39,7 @@
 
 .animate-slide {
   animation: slide 20s linear infinite;
+  transition: none; /* Don't apply theme transition to this */
 }
 
 .animate-slide:hover {

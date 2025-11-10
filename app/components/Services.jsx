@@ -49,15 +49,17 @@ const Services = ({ isDarkMode }) => {
             className={`p-6 transition-all duration-300 border border-gray-300 rounded-lg cursor-pointer sm:p-8 hover:bg-lightHover hover:-translate-y-3 hover:shadow-2xl hover:border-gray-400 dark:border-[#01C38D]/30 dark:hover:bg-[#132D46] dark:hover:shadow-[#01C38D]/20 dark:hover:border-[#01C38D] group ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'}`}
             style={{transitionDelay: isVisible ? `${300 + i * 100}ms` : '0ms'}}
           >
-            <Image 
-              src={icon} 
-              alt={title} 
-              width={40}
-              height={40}
-              className={`mb-4 transition-transform duration-200 group-hover:scale-110 group-hover:rotate-6 ${isDarkMode ? 'invert' : ''}`} 
-            />
-            <h3 className="mb-2 text-lg text-[#2d3748] dark:text-[#01C38D]">{title}</h3>
-            <p className="text-sm text-gray-600 dark:text-[#FFFFFF]">{description}</p>
+            <div className="flex justify-center mb-4">
+              <Image 
+                src={icon} 
+                alt={title} 
+                width={40}
+                height={40}
+                className={`transition-transform duration-200 group-hover:scale-110 group-hover:rotate-6 ${isDarkMode ? 'invert' : ''}`} 
+              />
+            </div>
+            <h3 className="mb-2 text-lg text-center text-[#2d3748] dark:text-[#01C38D]">{title}</h3>
+            <p className="text-sm text-center text-gray-600 dark:text-[#FFFFFF] leading-relaxed">{description}</p>
           </div>
         ))}
       </div>

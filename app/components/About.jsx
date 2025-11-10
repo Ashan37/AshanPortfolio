@@ -50,7 +50,9 @@ const About = ({ isDarkMode }) => {
             {/* Left - Profile Image */}
             <div
               className={`flex justify-center lg:justify-end transition-all duration-700 ${
-                isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"
+                isVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-20"
               }`}
             >
               <div className="relative">
@@ -69,16 +71,18 @@ const About = ({ isDarkMode }) => {
             {/* Right - Info */}
             <div
               className={`flex flex-col justify-center transition-all duration-700 delay-200 ${
-                isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
+                isVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-20"
               }`}
             >
-              <div className="space-y-4">
+              <div className="space-y-4 text-center lg:text-left">
                 <h2 className="text-3xl md:text-4xl font-semibold text-[#1a202c] dark:text-[#01C38D] min-h-[50px] font-Ovo">
                   <span>{text}</span>
                   <Cursor cursorStyle="|" cursorColor="#01C38D" />
                 </h2>
 
-                <p className="text-base md:text-lg text-gray-600 dark:text-[#FFFFFF] leading-relaxed font-Ovo">
+                <p className="text-base md:text-lg text-gray-600 dark:text-[#FFFFFF] leading-relaxed font-Ovo text-center lg:text-left text-balance">
                   Hi, I&apos;m Ashan! A Full Stack Developer specializing in modern web technologies. I build scalable, user-friendly applications with{" "}
                   <span className="font-semibold text-[#1a202c] dark:text-[#01C38D]">
                     MERN Stack
@@ -86,7 +90,7 @@ const About = ({ isDarkMode }) => {
                   . Passionate about creating seamless user experiences and robust backend systems.
                 </p>
 
-                <p className="text-sm text-gray-500 dark:text-gray-400 font-Ovo">
+                <p className="text-sm text-gray-500 dark:text-gray-400 font-Ovo text-center lg:text-left">
                   Based in Colombo, Sri Lanka 🇱🇰
                 </p>
               </div>
@@ -107,7 +111,10 @@ const About = ({ isDarkMode }) => {
               {/* First set */}
               <div className="flex items-center space-x-8 min-w-max">
                 {toolsData.map((tool, i) => (
-                  <div key={`tech-1-${i}`} className="flex flex-col items-center">
+                  <div
+                    key={`tech-1-${i}`}
+                    className="flex flex-col items-center"
+                  >
                     <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 dark:border-[#01C38D]/30 bg-white dark:bg-[#132D46] p-3 transition-transform hover:scale-110 flex items-center justify-center">
                       <Image
                         src={tool}
@@ -125,7 +132,10 @@ const About = ({ isDarkMode }) => {
               {/* Duplicate set for seamless loop */}
               <div className="flex items-center space-x-8 min-w-max">
                 {toolsData.map((tool, i) => (
-                  <div key={`tech-2-${i}`} className="flex flex-col items-center">
+                  <div
+                    key={`tech-2-${i}`}
+                    className="flex flex-col items-center"
+                  >
                     <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 dark:border-[#01C38D]/30 bg-white dark:bg-[#132D46] p-3 transition-transform hover:scale-110 flex items-center justify-center">
                       <Image
                         src={tool}

@@ -103,18 +103,18 @@ const Works = ({ isDarkMode }) => {
 
               {/* Project Details */}
               <div className="flex flex-col flex-grow p-6">
-                <h3 className="text-lg font-bold mb-2 text-gray-800 dark:text-white line-clamp-2 font-Ovo">
+                <h3 className="text-lg font-bold mb-2 text-center text-gray-800 dark:text-white line-clamp-2 font-Ovo">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-snug mb-4 line-clamp-2 font-Ovo">
+                <p className="text-gray-600 dark:text-gray-300 text-sm text-center leading-relaxed mb-4 line-clamp-3 font-Ovo">
                   {project.subtitle}
                 </p>
 
                 <div className="border-t border-gray-200 dark:border-[#01C38D]/20 pt-3 mb-3"></div>
 
                 {/* Role */}
-                <div className="text-xs flex flex-wrap items-center mb-2">
+                <div className="text-xs flex flex-wrap justify-center items-center mb-2">
                   <span className="text-gray-400 dark:text-gray-500 mr-1 font-Ovo">Role:</span>
                   <span className="text-gray-700 dark:text-gray-300 font-medium font-Ovo">
                     {project.role.join(" / ")}
@@ -122,7 +122,7 @@ const Works = ({ isDarkMode }) => {
                 </div>
 
                 {/* Tech Stack */}
-                <div className="text-xs flex flex-wrap items-center mb-4">
+                <div className="text-xs flex flex-wrap justify-center items-center mb-4">
                   <span className="text-gray-400 dark:text-gray-500 mr-1 font-Ovo">Stack:</span>
                   {project.techUsed.map((tech, i) => (
                     <React.Fragment key={tech}>
@@ -137,7 +137,7 @@ const Works = ({ isDarkMode }) => {
                 </div>
 
                 {/* Social Links */}
-                <div className="flex gap-4 mt-auto pt-3 border-t border-gray-200 dark:border-[#01C38D]/20">
+                <div className="flex gap-4 justify-center mt-auto pt-3 border-t border-gray-200 dark:border-[#01C38D]/20">
                   {isValidLink(project.links.github) && (
                     <a
                       href={project.links.github}

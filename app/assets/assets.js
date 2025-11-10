@@ -180,30 +180,31 @@ export const serviceData = [
     icon: assets.front_end_programming,
     title: "Frontend development",
     description:
-      "Frontend development focuses on building responsive and interactive user interfaces that provide a seamless user experience across devices.",
+      "Building responsive and interactive user interfaces with modern frameworks like React and Next.js to deliver seamless experiences across all devices.",
     link: "",
   },
   {
     icon: assets.web_development,
     title: "Backend Development",
     description:
-      "Backend development involves creating robust server-side logic, APIs, and application workflows to ensure smooth functionality and data processing.",
-    link: "",
-  },
-  {
-    icon: assets.ux,
-    title: "UI/UX design",
-    description:
-      "Focuses on creating intuitive interfaces and seamless user experiences that enhance usability and engagement.",
+      "Creating robust server-side solutions with Node.js and Express, implementing secure APIs and efficient application workflows for optimal performance.",
     link: "",
   },
   {
     icon: assets.database,
     title: "Database management",
     description:
-      "Database management ensures efficient storage, retrieval, and security of data, supporting scalable and reliable applications.",
+      "Designing and managing efficient database systems using MongoDB and MySQL, ensuring data integrity, security, and scalability for your applications.",
     link: "",
   },
+  {
+    icon: assets.ux,
+    title: "UI/UX design",
+    description:
+      "Crafting intuitive and visually appealing interfaces that prioritize user experience, ensuring easy navigation and enhanced engagement throughout.",
+    link: "",
+  },
+  
 ];
 
 export const infoList = [

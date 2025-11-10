@@ -5,12 +5,16 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         "light-hover": "#fcf4ff",
         "dark-hover": "#2a004a",
         darkTheme: "#191E29",
+      },
+      transitionProperty: {
+        'theme': 'background-color, border-color, color, fill, stroke',
       },
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
@@ -59,6 +63,5 @@ module.exports = {
       },
     },
   },
-  darkMode: "class",
   plugins: [],
 };

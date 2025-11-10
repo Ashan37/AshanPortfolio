@@ -2,10 +2,20 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { assets } from "../assets/assets";
+import ThemeToggle from "./ThemeToggle";
+import { useTheme } from "next-themes";
 
-const Navbar = ({ isDarkMode, setIsDarkMode }) => {
+const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDarkMode = mounted && theme === "dark";
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -100,28 +110,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <button
-            onClick={() => setIsDarkMode((prev) => !prev)}
-            type="button"
-            aria-label="Toggle theme"
-            className="p-1"
-          >
-            {isDarkMode ? (
-              <Image
-                src={assets.sun_icon}
-                alt="Light mode"
-                width={20}
-                height={20}
-              />
-            ) : (
-              <Image
-                src={assets.moon_icon}
-                alt="Dark mode"
-                width={20}
-                height={20}
-              />
-            )}
-          </button>
+          <ThemeToggle />
 
           <a
             href="#contact"
@@ -129,11 +118,11 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           >
             Contact
             <Image
-              src={ assets.arrow_icon}
+              src={assets.arrow_icon}
               alt="arrow"
               width={16}
               height={16}
-              className={ isDarkMode ? "invert" : ""}
+              className={isDarkMode ? "invert" : ""}
             />
           </a>
 

@@ -21,10 +21,10 @@ const Header = ({ isDarkMode }) => {
       </h3>
 
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight font-Ovo font-semibold z-20 text-[#1a202c] dark:text-[#01C38D] animate-fadeIn" style={{animationDelay: '0.4s'}}>
-        Passionate Full Stack Developer.
+       Innovative Full Stack Developer.
       </h1>
 
-      <p className="z-20 max-w-2xl mx-auto text-gray-600 font-Ovo dark:text-[#FFFFFF] animate-slideInRight" style={{animationDelay: '0.6s'}}>
+      <p className="z-20 max-w-2xl mx-auto text-center text-gray-600 font-Ovo dark:text-[#FFFFFF] leading-relaxed animate-slideInRight" style={{animationDelay: '0.6s'}}>
         I am a Full Stack Developer from Colombo, Sri Lanka.
       </p>
 
