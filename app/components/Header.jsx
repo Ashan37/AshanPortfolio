@@ -5,13 +5,14 @@ import { assets } from "../assets/assets";
 const Header = ({ isDarkMode }) => {
   return (
     <div className="relative flex flex-col items-center justify-center w-11/12 h-screen max-w-4xl gap-6 px-4 mx-auto text-center lg:pt-48 sm:pt-32">
+      {/* Profile Image - Fully Round */}
       <div className="relative z-20 animate-fadeIn" style={{animationDelay: '0.2s'}}>
         <Image
           src={assets.profile_img}
           alt="Profile"
-          width={192}
-          height={192}
-          className="w-32 mx-auto rounded-full shadow-2xl md:w-40 lg:w-48 dark:shadow-[0_20px_50px_rgba(1,195,141,0.3)]"
+          width={160}
+          height={160}
+          className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mx-auto rounded-full shadow-2xl dark:shadow-[0_20px_50px_rgba(1,195,141,0.3)] object-cover"
           priority
         />
       </div>
